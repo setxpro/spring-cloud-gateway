@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      routes:
+        - id: microservice1
+          uri: lb://microservice1
+          predicates:
+            - Path=/hello
+    locator:
+      enabled: true
+      lower-case-service-id: true
+server:
+  port: 8082
+eureka:
+  client:
+    service-url:
+      defaultZone: https://discovery-server-smai.onrender.com/eureka
