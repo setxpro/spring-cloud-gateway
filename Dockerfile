@@ -13,6 +13,6 @@ FROM openjdk:17-jdk-slim
 
 EXPOSE 8880
 
-COPY --from=build /target/gateway-0.0.1-SNAPSHOT.jar gateway.jar
+COPY --from=build /target/gateway-0.0.1-SNAPSHOT.jar app_gateway.jar
 
-ENTRYPOINT [ "java", "-jar", "gateway.jar" ]
+ENTRYPOINT [ "java", "-jar", "app_gateway.jar" ]
