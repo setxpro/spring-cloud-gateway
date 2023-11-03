@@ -3,7 +3,7 @@ eureka:
     service-url:
       defaultZone: https://discovery-server-smai.onrender.com/eureka
       instance:
-        hostname: discovery-server-smai.onrender
+        hostname: discovery-server-smai.onrender.com
         instance-id: ${spring.application.name}:${instanceId:${random.value}}
 server:
   port: 8082
